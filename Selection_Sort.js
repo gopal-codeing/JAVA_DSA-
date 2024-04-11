@@ -8,7 +8,7 @@ for(let i=0;i<arr.length-1;i++){
     // very time check this lowest index 
     if(arr[index] > arr[j]){  
       index = j; 
-      // console.log(ind);
+      // console.log(index);
     }
   }
 // swap this 
