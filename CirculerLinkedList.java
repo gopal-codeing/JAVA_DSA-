@@ -34,6 +34,7 @@ public class CirculerLinkedList{
       if(tail!=null){
         System.out.print("Yes i am circuler LinkedList");
      }
+     }
      
      public static void main(String []args){
         // System.out.println("Hello, World!");
