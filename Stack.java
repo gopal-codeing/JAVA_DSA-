@@ -61,5 +61,6 @@ void peek(){
                 //  obj.insert(20);
         //          obj.print();
             obj.peek();
+         obj.pop();
      }
 }
