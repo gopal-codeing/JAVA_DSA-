@@ -1,5 +1,3 @@
-/* Online Java Compiler and Editor */
-
 
   class Node{
       int data;
@@ -14,6 +12,7 @@
 public class Stack{
     Node head;
     Node tail;
+  // insert of the stack
         void insert(int value){
            Node obj = new Node(value);
            if(head ==  null){
@@ -29,7 +28,7 @@ void print(){
        for(Node current = head; current!=null; current = current.next)
             System.out.print(current.data + " ");
 }
-
+// peek of this stack
 void peek(){
        Node current=head;
        int peeknumber = -1;
@@ -41,7 +40,17 @@ void peek(){
          System.out.println(peeknumber);
       }
 }
-
+// pop of the stack 
+  void pop(){
+     if(head==null)
+        throw new IllegalStateException("Stack is empty can not pop ");
+         Node  tem = head.next;
+              head = head.next;
+              tem.next = null;
+              
+              System.out.print(tem.data);
+}
+  
      public static void main(String []args){
         
         Stack obj = new Stack();
