@@ -1,21 +1,23 @@
 /* Online Java Compiler and Editor */
-import java.util.*;
-class Node {
-    int data;
-    Node right;
-    Node left;
-
-    Node(int data) {
-        this.data=  data;
-        right = null;
-        left  = null;
-    }
-}
-
-public class Createtree {
+  import java.util.*;
+  class Node{
+      int data;
+      Node left;
+      Node right;
+      
+      Node(int data){
+          this.data = data;
+          this.left = null;
+          this.right = null;
+      }
+  }
+  
+public class Createtree{
+    //    Level order traversal 
     Scanner sc = new Scanner(System.in);
-    Node createTree(Node root) {
-         System.out.print("Enter the data : ");
+    
+    Node  bildTree(Node root){
+        System.out.print("Enter the data : ");
       int data = sc.nextInt();
           root = new Node(data);
           if(data ==-1)
@@ -27,11 +29,17 @@ public class Createtree {
           
          return root;
     }
-
-    public static void main(String []args) {
-        Createtree call = new Createtree();
-        Node root = null;
-
-        call.createTree(root);
-    }
+    // Leveloder traversal 
+    //  Leveloder traversal  ko hmm  brith fast search bhi bolte  hai 
+   
+    
+     public static void main(String []args){
+        // System.out.println("Level order trareval..!");
+        Createtree obj = new Createtree();
+        Node root = null ;
+        root= obj.bildTree(root);
+        
+        
+        
+     }
 }
