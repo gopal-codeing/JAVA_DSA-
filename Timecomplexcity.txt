@@ -1,0 +1,256 @@
+1. Constant Time - 𝑂(1)
+The execution time is constant and does not change with the size of the input.
+
+Example: Accessing an element in an array 
+int getElement(int arr[], int index) {
+    return arr[index]; // This operation is O(1)
+}
+
+2. Logarithmic Time - O(logn)
+The execution time grows logarithmically as the input size increases.
+
+Example: Binary search 
+
+int binarySearch(int arr[], int size, int target) {
+    int left = 0, right = size - 1;
+    while (left <= right) {
+        int mid = left + (right - left) / 2;
+        if (arr[mid] == target)
+            return mid;
+        if (arr[mid] < target)
+            left = mid + 1;
+        else
+            right = mid - 1;
+    }
+    return -1; // Target not found
+}
+
+3. Linear Time - O(n)
+The execution time grows linearly with the size of the input.
+
+Example: Finding the maximum element in an array
+int findMax(int arr[], int size) {
+    int max = arr[0];
+    for (int i = 1; i < size; i++) {
+        if (arr[i] > max)
+            max = arr[i];
+    }
+    return max;
+}
+
+4. Linearithmic Time -O(nlogn)
+The execution time grows in a combination of linear and logarithmic times, typically seen in efficient sorting algorithms.
+
+Example: Merge sort 
+void merge(int arr[], int left, int mid, int right) {
+    // Merging two halves
+}
+
+void mergeSort(int arr[], int left, int right) {
+    if (left < right) {
+        int mid = left + (right - left) / 2;
+        mergeSort(arr, left, mid);
+        mergeSort(arr, mid + 1, right);
+        merge(arr, left, mid, right);
+    }
+}
+5. Quadratic Time - O(n2) squere 
+The execution time grows quadratically with the size of the input, typical in algorithms with nested loops.
+
+Example: Bubble sort
+void bubbleSort(int arr[], int size) {
+    for (int i = 0; i < size - 1; i++) {
+        for (int j = 0; j < size - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                // Swap arr[j] and arr[j + 1]
+                int temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+}
+6. Cubic Time - O(n3) // cube
+The execution time grows cubically with the size of the input, often seen in algorithms with triple nested loops.
+
+Example: Triple nested loops 
+void exampleCubic(int n) {
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            for (int k = 0; k < n; k++) {
+                // Some constant time operation
+            }
+        }
+    }
+}
+7. Exponential Time - O(2 n)
+The execution time doubles with each additional element in the input, often seen in recursive algorithms solving combinatorial problems.
+
+Example: Solving the Fibonacci sequence recursively
+int fibonacci(int n) {
+    if (n <= 1)
+        return n;
+    return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+8. Factorial Time - O(n!)
+The execution time grows factorially with the size of the input, common in algorithms that generate all permutations of a set.
+
+Example: Generating all permutations of a string
+void swap(char* x, char* y) {
+    char temp = *x;
+    *x = *y;
+    *y = temp;
+}
+
+
+
+
+Time complexity is a way to describe the efficiency of an algorithm by indicating the amount of time it takes to complete as a function of the size of the input. Here are some common types of time complexities with simple examples:
+
+### 1. Constant Time - \(O(1)\)
+The execution time is constant and does not change with the size of the input.
+
+**Example: Accessing an element in an array**
+```c
+int getElement(int arr[], int index) {
+    return arr[index]; // This operation is O(1)
+}
+```
+
+### 2. Logarithmic Time - \(O(\log n)\)
+The execution time grows logarithmically as the input size increases.
+
+**Example: Binary search**
+```c
+int binarySearch(int arr[], int size, int target) {
+    int left = 0, right = size - 1;
+    while (left <= right) {
+        int mid = left + (right - left) / 2;
+        if (arr[mid] == target)
+            return mid;
+        if (arr[mid] < target)
+            left = mid + 1;
+        else
+            right = mid - 1;
+    }
+    return -1; // Target not found
+}
+```
+
+### 3. Linear Time - \(O(n)\)
+The execution time grows linearly with the size of the input.
+
+**Example: Finding the maximum element in an array**
+```c
+int findMax(int arr[], int size) {
+    int max = arr[0];
+    for (int i = 1; i < size; i++) {
+        if (arr[i] > max)
+            max = arr[i];
+    }
+    return max;
+}
+```
+
+### 4. Linearithmic Time - \(O(n \log n)\)
+The execution time grows in a combination of linear and logarithmic times, typically seen in efficient sorting algorithms.
+
+**Example: Merge sort**
+```c
+void merge(int arr[], int left, int mid, int right) {
+    // Merging two halves
+}
+
+void mergeSort(int arr[], int left, int right) {
+    if (left < right) {
+        int mid = left + (right - left) / 2;
+        mergeSort(arr, left, mid);
+        mergeSort(arr, mid + 1, right);
+        merge(arr, left, mid, right);
+    }
+}
+```
+
+### 5. Quadratic Time - \(O(n^2)\)
+The execution time grows quadratically with the size of the input, typical in algorithms with nested loops.
+
+**Example: Bubble sort**
+```c
+void bubbleSort(int arr[], int size) {
+    for (int i = 0; i < size - 1; i++) {
+        for (int j = 0; j < size - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                // Swap arr[j] and arr[j + 1]
+                int temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+}
+```
+
+### 6. Cubic Time - \(O(n^3)\)
+The execution time grows cubically with the size of the input, often seen in algorithms with triple nested loops.
+
+**Example: Triple nested loops**
+```c
+void exampleCubic(int n) {
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            for (int k = 0; k < n; k++) {
+                // Some constant time operation
+            }
+        }
+    }
+}
+```
+
+### 7. Exponential Time - \(O(2^n)\)
+The execution time doubles with each additional element in the input, often seen in recursive algorithms solving combinatorial problems.
+
+**Example: Solving the Fibonacci sequence recursively**
+```c
+int fibonacci(int n) {
+    if (n <= 1)
+        return n;
+    return fibonacci(n - 1) + fibonacci(n - 2);
+}
+```
+
+### 8. Factorial Time - \(O(n!)\)
+The execution time grows factorially with the size of the input, common in algorithms that generate all permutations of a set.
+
+**Example: Generating all permutations of a string**
+```c
+void swap(char* x, char* y) {
+    char temp = *x;
+    *x = *y;
+    *y = temp;
+}
+
+void permute(char* str, int l, int r) {
+    if (l == r)
+        printf("%s\n", str);
+    else {
+        for (int i = l; i <= r; i++) {
+            swap((str + l), (str + i));
+            permute(str, l + 1, r);
+            swap((str + l), (str + i)); // backtrack
+        }
+    }
+}
+```
+
+### Summary of Time Complexities:
+1. **\(O(1)\)** - Constant Time
+2. **\(O(\log n)\)** - Logarithmic Time
+3. **\(O(n)\)** - Linear Time
+4. **\(O(n \log n)\)** - Linearithmic Time
+5. **\(O(n^2)\)** - Quadratic Time
+6. **\(O(n^3)\)** - Cubic Time
+7. **\(O(2^n)\)** - Exponential Time
+8. **\(O(n!)\)** - Factorial Time
+
+Understanding these complexities helps in analyzing the efficiency and feasibility of algorithms for large inputs.
