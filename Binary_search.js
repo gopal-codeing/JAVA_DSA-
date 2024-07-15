@@ -2,13 +2,13 @@
 const call = (arr,start,last,target) =>{
    let mid;
      while (start <=last){
-         mid =  start + (last - start) /2;
+         mid =  Math.floor((start+last) /2);
          if(arr[mid] == target){
           return mid; 
          }if(arr[mid] < target){
-           start =  mid++;
+           start =  mid+1;
          }else{
-           last = mid--;
+           last = mid-1;
          }
      }
   return -1;
